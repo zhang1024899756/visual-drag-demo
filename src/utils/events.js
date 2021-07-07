@@ -5,11 +5,13 @@ const events = {
             window.location.href = url
         }
     },
-
     alert(msg) {
         if (msg) {
-            alert(msg)
+            console.log(msg)
         }
+    },
+    uiAction() {
+        console.log('触发了交互事件')
     },
 }
 
@@ -18,6 +20,13 @@ const mixins = {
 }
 
 const eventList = [
+    // key == events[key]
+    {
+        key: 'uiAction',
+        label: '交互事件',
+        event: events.uiAction,
+        param: '',
+    },
     {
         key: 'redirect',
         label: '跳转事件',
@@ -26,7 +35,7 @@ const eventList = [
     },
     {
         key: 'alert',
-        label: 'alert 事件',
+        label: '弹窗事件',
         event: events.alert,
         param: '',
     },

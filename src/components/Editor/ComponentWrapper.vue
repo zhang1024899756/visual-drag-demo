@@ -31,6 +31,7 @@ export default {
 
         handleClick() {
             const events = this.config.events
+            console.log(events)
             Object.keys(events).forEach(event => {
                 this[event](events[event])
             })
