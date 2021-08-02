@@ -24,6 +24,9 @@
                 <span>画布比例</span>
                 <input v-model="scale" @input="handleScaleChange"> %
             </div>
+            <UploadPsd>
+                <el-button>导入psd</el-button>
+            </UploadPsd>
         </div>
 
         <!-- 预览 -->
@@ -37,11 +40,12 @@ import toast from '@/utils/toast'
 import { mapState } from 'vuex'
 import Preview from '@/components/Editor/Preview'
 import { commonStyle, commonAttr } from '@/custom-component/component-list'
+import UploadPsd from '@/components/UploadPsd'
 import eventBus from '@/utils/eventBus'
 import { deepCopy } from '@/utils/utils'
 
 export default {
-    components: { Preview },
+    components: { Preview, UploadPsd },
     data() {
         return {
             isShowPreview: false,
