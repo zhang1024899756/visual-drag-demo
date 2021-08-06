@@ -17,6 +17,7 @@ const list = [
         component: 'v-text',
         label: '文字',
         propValue: '双击编辑文字',
+        formatte: 'p',
         icon: 'wenben',
         style: {
             width: 200,
@@ -33,6 +34,7 @@ const list = [
         component: 'v-button', 
         label: '按钮', 
         propValue: '按钮',
+        formatte: 'button',
         icon: 'button',
         style: {
             width: 100,
@@ -52,6 +54,7 @@ const list = [
     {
         component: 'Picture', 
         label: '图片', 
+        formatte: 'img',
         icon: 'tupian',
         propValue: require('@/assets/title.jpg'),
         style: {
@@ -64,6 +67,7 @@ const list = [
         component: 'rect-shape',
         label: '矩形',
         propValue: '&nbsp;',
+        formatte: 'div',
         icon: 'juxing',
         style: {
             width: 200,

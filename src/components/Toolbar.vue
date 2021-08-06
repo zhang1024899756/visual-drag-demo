@@ -4,6 +4,9 @@
             <el-button @click="undo">撤消</el-button>
             <el-button @click="redo">重做</el-button>
             <label for="input" class="insert">插入图片</label>
+            <UploadPsd>
+                <el-button>导入psd</el-button>
+            </UploadPsd>
             <input type="file" @change="handleFileChange" id="input" hidden />
             <el-button @click="preview" style="margin-left: 10px;">预览</el-button>
             <el-button @click="save">保存</el-button>
@@ -24,9 +27,6 @@
                 <span>画布比例</span>
                 <input v-model="scale" @input="handleScaleChange"> %
             </div>
-            <UploadPsd>
-                <el-button>导入psd</el-button>
-            </UploadPsd>
         </div>
 
         <!-- 预览 -->

@@ -11,6 +11,8 @@
 </template>
 
 <script>
+import psdFormatteToJson from '@/utils/psdFormatteToJson'
+
 const PSD = require('psd.js')
 
 export default {
@@ -32,8 +34,7 @@ export default {
         async analysePsd(file) {
             const url = window.URL.createObjectURL(file)
             let psd = await PSD.fromURL(url)
-            console.log(psd.tree().export())
-            console.log(psd.tree().descendants())
+            psdFormatteToJson(psd.tree().export())
         },
     },
 }

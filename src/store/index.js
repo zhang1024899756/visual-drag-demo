@@ -57,6 +57,10 @@ const data = {
             state.canvasStyleData = style
         },
 
+        setCanvasStyleByKey(state, status) {
+            state.canvasStyleData[status.key] = status.value
+        },
+
         setCurComponent(state, { component, index }) {
             state.curComponent = component
             state.curComponentIndex = index
